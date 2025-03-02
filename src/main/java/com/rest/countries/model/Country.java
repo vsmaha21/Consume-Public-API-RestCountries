@@ -8,7 +8,7 @@ public class Country {
 	private Name name; // Represents name information (common and official)
 	private List<String> capital; // Capital city or cities
 	private List<String> continents; // Continent(s) of the country
-	private double area; // Area of the country
+	private Long area; // Area of the country
 	private Long population; // Population of the country
 	private Map<String, Currency> currencies; // Currencies of the country
 	private Map<String, String> languages; // Languages spoken in the country
@@ -40,11 +40,11 @@ public class Country {
 		this.continents = continents;
 	}
 
-	public double getArea() {
+	public Long getArea() {
 		return area;
 	}
 
-	public void setArea(double area) {
+	public void setArea(Long area) {
 		this.area = area;
 	}
 

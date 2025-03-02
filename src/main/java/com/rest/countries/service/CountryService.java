@@ -77,8 +77,8 @@ public class CountryService {
 		// country : population in descending order
 
 		case "area":
-			return countries.stream().sorted((c1, c2) -> Double.compare(c1.getArea(), c2.getArea()))
-					.map(c -> c.getName().getCommon()).collect(Collectors.toList());
+			return countries.stream().sorted((c1, c2) -> Double.compare(c2.getArea(), c1.getArea()))
+					.map(c -> c.getName().getCommon() + " : " + c.getArea()).collect(Collectors.toList());
 		default:
 			return countries.stream().map(c -> c.getName().getCommon()).collect(Collectors.toList());
 		// Return the list without sorting if the parameter is invalid
